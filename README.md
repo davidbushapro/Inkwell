@@ -53,9 +53,9 @@ graph mood 365
 
 ---
 
-## 🏃‍♂️ 3. Executing Your Language
+## 🏃‍♂️ 3. Executing The Language
 
-You can run your code utilizing the standalone binary directly, or use the automated macro runtime launchers included in your repository.
+You can run the code utilizing the standalone binary directly, or use the automated macro runtime launchers included in your repository.
 
 ### Method A: Using the Automated Wrapper Launchers (Recommended)
 Open your terminal inside your project workspace folder directory and execute the unified shorthand scripts:
