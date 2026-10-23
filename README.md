@@ -14,7 +14,10 @@ Inkwell is distributed as a pre-compiled standalone execution tool. Download the
 1. Download `inkwell_mac` to your workspace folder.
 2. Open your Terminal and grant execution permissions to the machine binary:
    ```bash
+
+   cd ~/Downloads/inkwell
    chmod +x inkwell_mac
+   ./run entry.ink
    ```
 
 ### 💻 Windows Setup
