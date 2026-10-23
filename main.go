@@ -39,7 +39,7 @@ func main() {
 	db := loadDatabase()
 	todayRecord := DayRecord{Mood: 5, JournalText: ""}
 
-	// Check if a log entry already exists for today to carry forward text/mood strings during back-to-back testing runs
+	
 	nowKey := time.Now().Format("2006-01-02")
 	for d, rec := range db.History {
 		if rec.DateKey == nowKey {
@@ -63,7 +63,7 @@ func executeInkwell(code string, db *JournalDatabase, today *DayRecord) {
 			continue
 		}
 
-		// INTERACTIVE MOOD TRACKER ELEMENT: note mood = prompt "..."
+		
 		if strings.HasPrefix(trimmed, "note mood = prompt ") {
 			promptMsg := strings.Trim(strings.TrimSpace(trimmed[19:]), "\"")
 			fmt.Println(promptMsg)
@@ -75,12 +75,12 @@ func executeInkwell(code string, db *JournalDatabase, today *DayRecord) {
 			if num, err := strconv.Atoi(input); err == nil {
 				today.Mood = num
 			} else {
-				today.Mood = 5 // Fallback baseline if a user types junk strings
+				today.Mood = 5 
 			}
 			continue
 		}
 
-		// NATIVE JOURNAL BLOCK WRITER: entry "..."
+		
 		if strings.HasPrefix(trimmed, "entry ") {
 			promptMsg := strings.Trim(strings.TrimSpace(trimmed[6:]), "\"")
 			fmt.Println(promptMsg)
@@ -89,7 +89,7 @@ func executeInkwell(code string, db *JournalDatabase, today *DayRecord) {
 			paragraph, _ := reader.ReadString('\n')
 			today.JournalText = strings.TrimSpace(paragraph)
 
-			// Capture precise execution clocks down to the second
+			
 			now := time.Now()
 			today.Timestamp = now.Format("03:04:05 PM")
 			today.DateKey = now.Format("2006-01-02")
