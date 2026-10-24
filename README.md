@@ -11,14 +11,41 @@ Inkwell compiles down into native, single-file standalone binaries with **zero e
 Inkwell is distributed as a pre-compiled standalone execution tool. Download the binary matching your operational platform from your secure distribution box and place it directly into your local project workspace folder.
 
 ### 🍏 macOS Setup
-1. Download `inkwell_mac` to your workspace folder.
-2. Open your Terminal and grant execution permissions to the machine binary:
-   ```bash
 
-   cd ~/Downloads/inkwell
-   chmod +x inkwell_mac
-   ./run entry.ink
-   ```
+. Advanced Directory Setup & Permissions
+
+1. Download inkwell_mac from the website.
+2. Create a folder named Journal inside your Documents directory (~/Documents/Journal) and move the downloaded binary file there.
+3. Open your native Terminal app, navigate to your workspace directory, and grant the binary system execution permissions:bash
+cd ~/Documents/Journal
+chmod +x inkwell_mac
+Use code with caution.
+Note: Because this is an unsigned standalone binary, if macOS Gatekeeper blocks execution, navigate to System Settings ➔ Privacy & Security, scroll down to the Security section, and click "Open Anyway" to authorize your engine.
+
+2. Run the Autonomous Initialization Module
+
+Run the engine completely by itself inside your directory with no script arguments attached:
+bash
+./inkwell_mac
+Use code with caution.
+Inkwell will detect that no target script was specified, intercept the blank execution, and instantly write a flawless template file named entry.ink right inside your folder directory.
+
+3. Execute Your Script & Timeline Telemetry
+
+To run your daily interactive logging cycle, pass your newly generated blueprint file as an argument into the compiler:
+bash
+./inkwell_mac entry.ink
+Use code with caution.
+
+🎮 The Live Experience Sequence:
+
+• Step 1: The engine pauses execution and prompts you: Rate how today felt (1-10):. Type a score number and hit Enter.
+• Step 2: It immediately prompts you: Reflecting on today's milestones, wins, and progress context:. Type your journal reflection text and hit Enter.
+• Step 3: The parser automatically serializes your data payloads securely into a localized journal_db.json database on your hard drive, and renders your historical timeline stream as a visual character sparkline tracking graph right inside your console viewport window!
+
+🛑 Multi-Entry Guardrail Verification
+
+Execute ./inkwell_mac entry.ink a second time on the same day. Because your computer's internal system calendar detects that it is still the exact same date, Inkwell intelligently protects your timeline counter. It will refuse to jump ahead to Day 002. Instead, it maintains your perfect active location row index block, updates your database logs with your newest thoughts, and stamps your exact second-accurate execution clock string onto the display row layout. It will wait perfectly until midnight passes your machine's system clock to unlock your next sequential day track!
 
 ### 💻 Windows Setup
 1. Download `inkwell.exe` to your workspace folder.
